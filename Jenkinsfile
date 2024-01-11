@@ -12,7 +12,7 @@ pipeline {
         booleanParam(name: 'bail_on_fail', defaultValue: true, description: 'Want to stop the Pipeline execution if the Scan returns a failed policy evaluation? (Plugin execution only)')
         booleanParam(name: 'bail_on_plugin_fail', defaultValue: true, description: 'Want to stop the pipeline if the Jenkins Plugin Fails? (Plugin execution only)')
         string(name: "sysdig_cli_args", defaultValue: "", trim: true, description: "Optional inline arguments (Sysdig CLI Scanner Execution only)")
-        password(name:: 'api_token', defaultValue: '', description: 'Enter Secure API Token')
+        password(name: 'api_token', defaultValue: '', description: 'Enter Secure API Token')
     }
     stages {
         stage('Clean Workspace') {  // Cleans the workspace to avoid old files conflicts
