@@ -54,7 +54,7 @@ pipeline {
                     steps{
                         script{
                             if(env.sysdig_plugin){
-                                sysdigImageScan engineCredentialsId: "${api_token}", imageName: "${registry_url}/${registry_repo}/${docker_tag}", engineURL: "${params.sysdig_url}", policiesToApply: "${params.plugin_policies_to_apply}", bailOnFail: "${params.bail_on_fail}", bailOnPluginFail: "${params.bail_on_plugin_fail}"
+                                sysdigImageScan engineCredentialsId: '${api_token}', imageName: "${registry_url}/${registry_repo}/${docker_tag}", engineURL: "${params.sysdig_url}", policiesToApply: "${params.plugin_policies_to_apply}", bailOnFail: "${params.bail_on_fail}", bailOnPluginFail: "${params.bail_on_plugin_fail}"
                             }
                             else{
                                 echo 'Using CLI Scan'
