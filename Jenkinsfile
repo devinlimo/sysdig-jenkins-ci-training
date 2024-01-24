@@ -1,9 +1,9 @@
 pipeline {
     agent any
     parameters {  // Defines Parameters as Code
-        string(name: "git_repository", defaultValue: "https://github.com/dacesmo/sysdig-jenkins-ci-training.git", trim: true, description: "Git Repo to build Dockerfile from")
+        string(name: "git_repository", defaultValue: "https://github.com/devinlimo/sysdig-jenkins-ci-training.git", trim: true, description: "Git Repo to build Dockerfile from")
         string(name: "git_branch", defaultValue: "main", trim: true, description: "Git branch to build Dockerfile from")
-        string(name: "docker_tag", defaultValue: "myapp:v1.0.1", trim: true, description: "Docker Image Tag")
+        string(name: "docker_tag", defaultValue: "sample-node:v1.0.1", trim: true, description: "Docker Image Tag")
         string(name: "registry_url", defaultValue: "ghcr.io", trim: true, description: "Container Registry URL")
         string(name: "registry_repo", defaultValue: "dacesmo", trim: true, description: "Container Registry URL")
         string(name: "sysdig_url", defaultValue: "https://us2.app.sysdig.com", trim: true, description: "Sysdig URL based on Sysdig SaaS region")
